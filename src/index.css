@@ -1,0 +1,57 @@
+@import "tailwindcss";
+
+@layer base {
+  :root {
+    --font-display: 'Outfit', sans-serif;
+    --font-sans: 'Plus Jakarta Sans', sans-serif;
+    --font-mono: 'JetBrains Mono', monospace;
+  }
+
+  body {
+    font-family: var(--font-sans);
+    background-color: #09090b;
+    color: #f4f4f5;
+  }
+
+  h1, h2, h3, .font-display {
+    font-family: var(--font-display);
+  }
+}
+
+.nav-link-emerald {
+  position: relative;
+}
+
+.nav-link-emerald::after {
+  content: '';
+  position: absolute;
+  left: 0;
+  bottom: -4px;
+  width: 100%;
+  height: 2px;
+  background: linear-gradient(90deg, #34d399, #14b8a6, #f59e0b);
+  transform: scaleX(0);
+  transform-origin: right;
+  transition: transform 180ms cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.nav-link-emerald:hover::after,
+.nav-link-emerald:focus-visible::after {
+  transform: scaleX(1);
+  transform-origin: left;
+}
+
+.perch-card-lift {
+  transition: transform 200ms cubic-bezier(0.16, 1, 0.3, 1), box-shadow 200ms cubic-bezier(0.16, 1, 0.3, 1), border-color 200ms cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.perch-card-lift:hover {
+  transform: scale(1.02);
+  box-shadow: 0 25px 50px -12px rgba(16, 185, 129, 0.2);
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .perch-card-lift:hover {
+    transform: none;
+  }
+}

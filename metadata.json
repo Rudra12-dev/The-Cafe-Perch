@@ -1,0 +1,6 @@
+{
+  "name": "The Cafe Perch — Aliganj, Lucknow",
+  "description": "Artisanal brews, signature bites, open-air pet-friendly seating, and live acoustic sessions at The Cafe Perch in Sector J, Aliganj, Lucknow.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}
